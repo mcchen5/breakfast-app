@@ -49,5 +49,73 @@
       "image": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=800&q=80"
     }
   ],
+  "orders": [
+    {
+      "id": "2dcd",
+      "userId": "user_37eAj4MeHajPpXstcLjGdfatN3h",
+      "items": [
+        {
+          "menuItemId": "1",
+          "name": "經典早餐",
+          "price": 25,
+          "quantity": 1
+        },
+        {
+          "menuItemId": "2",
+          "name": "健康早餐",
+          "price": 20,
+          "quantity": 1
+        },
+        {
+          "menuItemId": "5",
+          "name": "漢堡系列",
+          "price": 30,
+          "quantity": 1
+        },
+        {
+          "menuItemId": "6",
+          "name": "披薩系列",
+          "price": 22,
+          "quantity": 1
+        },
+        {
+          "menuItemId": "8",
+          "name": "美式咖啡",
+          "price": 15,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 112,
+      "status": "pending",
+      "createdAt": "2026-01-03T06:51:23.177Z"
+    },
+    {
+      "id": "972b",
+      "userId": "user_37eAj4MeHajPpXstcLjGdfatN3h",
+      "items": [
+        {
+          "menuItemId": "1",
+          "name": "經典早餐",
+          "price": 25,
+          "quantity": 1
+        },
+        {
+          "menuItemId": "2",
+          "name": "健康早餐",
+          "price": 20,
+          "quantity": 1
+        },
+        {
+          "menuItemId": "5",
+          "name": "漢堡系列",
+          "price": 30,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 75,
+      "status": "pending",
+      "createdAt": "2026-01-03T06:52:19.017Z"
+    }
+  ],
   "cart": []
 }

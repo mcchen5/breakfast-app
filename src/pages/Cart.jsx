@@ -1,11 +1,31 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'; // 引入 useState
+import { Link, useNavigate } from 'react-router-dom'; // 引入 useNavigate
 import useCart from '../hooks/useCart';
 import { formatCurrency } from '../utils/helpers';
 
 const CartPage = () => {
   // 從 useCart Hook 中取得所有我們需要的狀態和函式
-  const { cartItems, cartCount, totalAmount, updateQuantity, removeFromCart } = useCart();
+  const { cartItems, cartCount, totalAmount, updateQuantity, removeFromCart, checkout } = useCart();
+  const navigate = useNavigate(); // 用於頁面跳轉
+  
+  const [isCheckingOut, setIsCheckingOut] = useState(false);
+  const [error, setError] = useState(null);
+
+  // 2. 建立結帳處理函式
+  const handleCheckout = async () => {
+    setIsCheckingOut(true);
+    setError(null);
+    try {
+      await checkout();
+      // 結帳成功後，可以跳轉到一個感謝頁面或訂單頁
+      alert("下單成功！感謝您的購買！");
+      navigate('/'); // 跳轉回首頁
+    } catch (err) {
+      setError(err.message || "結帳過程中發生錯誤，請稍後再試。");
+    } finally {
+      setIsCheckingOut(false);
+    }
+  };
 
   // 狀況一：購物車是空的
   if (cartCount === 0) {
@@ -24,7 +44,6 @@ const CartPage = () => {
   return (
     <div>
       <h1 className="text-3xl font-bold mb-6">我的購物車</h1>
-      
       {/* 商品列表 */}
       <div className="overflow-x-auto">
         <table className="table w-full">
@@ -84,7 +103,7 @@ const CartPage = () => {
           </tbody>
         </table>
       </div>
-
+      {error && <div className="alert alert-error mt-4"><span>{error}</span></div>}
       {/* 總計與結帳 */}
       <div className="mt-8 flex justify-end">
         <div className="card w-96 bg-base-200 shadow-xl">
@@ -99,8 +118,12 @@ const CartPage = () => {
               <span>{formatCurrency(totalAmount)}</span>
             </div>
             <div className="card-actions justify-end mt-4">
-              <button className="btn btn-primary w-full">
-                前往結帳
+               <button 
+                className="btn btn-primary w-full"
+                onClick={handleCheckout}
+                disabled={isCheckingOut}
+              >
+                {isCheckingOut ? <span className="loading loading-spinner"></span> : "前往結帳"}
               </button>
             </div>
           </div>

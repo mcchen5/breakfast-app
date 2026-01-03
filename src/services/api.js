@@ -51,3 +51,12 @@ export async function removeCartItem(itemId) {
   });
   return handleResponse(response);
 }
+// 建立一筆新訂單
+export async function createOrder(order) {
+  const response = await fetch(`${API_BASE_URL}/orders`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(order),
+  });
+  return handleResponse(response);
+}
