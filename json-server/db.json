@@ -115,6 +115,21 @@
       "totalAmount": 75,
       "status": "pending",
       "createdAt": "2026-01-03T06:52:19.017Z"
+    },
+    {
+      "id": "e5bd",
+      "userId": "user_37eAj4MeHajPpXstcLjGdfatN3h",
+      "items": [
+        {
+          "menuItemId": "2",
+          "name": "健康早餐",
+          "price": 20,
+          "quantity": 1
+        }
+      ],
+      "totalAmount": 20,
+      "status": "pending",
+      "createdAt": "2026-01-03T07:06:05.881Z"
     }
   ],
   "cart": []
