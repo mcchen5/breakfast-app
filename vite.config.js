@@ -4,6 +4,7 @@ import react from '@vitejs/plugin-react-swc'
 import tailwindcss from '@tailwindcss/vite' // 1. 引入 Tailwind CSS 的 Vite 外掛
 
 export default defineConfig({
+  base: './',
   plugins: [
     react(),
     tailwindcss(), // 2. 將外掛加入到 plugins 陣列中
