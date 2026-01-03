@@ -1,0 +1,53 @@
+{
+  "menu": [
+    {
+      "id": "1",
+      "category": "breakfast",
+      "name": "經典早餐",
+      "description": "包含煎蛋、培根、吐司和咖啡",
+      "price": 25,
+      "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "2",
+      "category": "breakfast",
+      "name": "健康早餐",
+      "description": "包含燕麥、水果和優格",
+      "price": 20,
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "5",
+      "category": "breakfast",
+      "name": "漢堡系列",
+      "description": "美式經典漢堡",
+      "price": 30,
+      "image": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "6",
+      "category": "breakfast",
+      "name": "披薩系列",
+      "description": "手工現烤披薩",
+      "price": 22,
+      "image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "8",
+      "category": "drink",
+      "name": "美式咖啡",
+      "description": "經典美式咖啡，提神醒腦",
+      "price": 15,
+      "image": "https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "id": "9",
+      "category": "drink",
+      "name": "拿鐵",
+      "description": "香濃牛奶與咖啡的完美結合",
+      "price": 20,
+      "image": "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "cart": []
+}

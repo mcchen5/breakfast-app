@@ -1,0 +1,7 @@
+/* src/index.css */
+@import "tailwindcss";
+
+/* DaisyUI V5 設定 - 直接在 CSS 中配置 */
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark;
+}
